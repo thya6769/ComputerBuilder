@@ -52,9 +52,12 @@ public:
     virtual std::string getPartInformation() const
     {
         char speed[5];
-        itoa(m_readSpeed, speed, 10);
+        std::stringstream ss;
+        ss << m_readSpeed;
 
-        std::string partInformation("Disc Drive: " + m_name + ", Read Speed: " + speed + "X");
+//        itoa(m_readSpeed, speed, 10);
+
+        std::string partInformation("Disc Drive: " + m_name + ", Read Speed: " + ss.str() + "X");
 
         return partInformation;
     }

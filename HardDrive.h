@@ -52,9 +52,12 @@ public:
     virtual std::string getPartInformation() const
     {
         char size[5];
-        itoa(m_size, size, 10);
+        std::stringstream ss;
+        ss << m_size;
 
-        std::string partInformation(m_name + ", Size: " + size + " GB");
+//        itoa(m_size, size, 10);
+
+        std::string partInformation(m_name + ", Size: " + ss.str() + " GB");
 
         return partInformation;
     }

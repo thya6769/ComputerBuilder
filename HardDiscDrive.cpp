@@ -24,10 +24,10 @@ std::string HardDiscDrive::getPartInformation() const
 {
     std::string partInformation = this->HardDrive::getPartInformation();
 
-    char spinSpeed[5];
-    itoa(m_spinSpeed, spinSpeed, 10);
+    std::stringstream ss;
+    ss << m_spinSpeed;
 
-    partInformation += ", " + std::string(spinSpeed) + " RPM";
+    partInformation += ", " + ss.str() + " RPM";
 
     return partInformation;
 }

@@ -94,6 +94,7 @@ bool computerHardDrivesTest()
     expected += "Drive 2: WD BLACK SERIES WD2003FZEX, Size: 2000 GB, 7200 RPM\n";
     expected += "Drive 3: WD BLACK SERIES WD2003FZEX, Size: 2000 GB, 7200 RPM";
     std::string actual = std::string(computer->getHardDriveSet().getPartInformation());
+
     for (int i = 0; i < 3; ++i)
     {
         delete hardDrives[i];
@@ -274,6 +275,9 @@ bool buildFullComputerTest()
     expected += "Blu-ray Drive: LG Black 12X BD-ROM, Read Speed: 12X";
     std::string actual = std::string(computer->getComputerSpecifications());
 
+
+    std::cout << actual << std::endl;
+    std::cout << expected << std::endl;
     delete computer;
 
     return expected == actual;

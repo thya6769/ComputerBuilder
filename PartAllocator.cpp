@@ -1,18 +1,18 @@
 #include "PartAllocator.h"
 
-GraphicsCardSet PartAllocator::getGraphicsCardSet(GraphicsCard* graphicsCards, int numberOfGraphicsCards)
+GraphicsCardSet* PartAllocator::getGraphicsCardSet(GraphicsCard* graphicsCards, int numberOfGraphicsCards)
 {
-    return GraphicsCardSet(graphicsCards, numberOfGraphicsCards);
+    return new GraphicsCardSet(graphicsCards, numberOfGraphicsCards);
 }
 
-HardDriveSet PartAllocator::getHardDriveSet(HardDrive** hardDrives, int numberOfHardDrives)
+HardDriveSet* PartAllocator::getHardDriveSet(HardDrive** hardDrives, int numberOfHardDrives)
 {
-    return HardDriveSet(hardDrives, numberOfHardDrives);
+    return new HardDriveSet(hardDrives, numberOfHardDrives);
 }
 
-RamSet PartAllocator::getRamSet(Ram* ram, int numberOfRamSticks)
+RamSet* PartAllocator::getRamSet(Ram* ram, int numberOfRamSticks)
 {
-    return RamSet(ram, numberOfRamSticks);
+    return new RamSet(ram, numberOfRamSticks);
 }
 
 // The next two methods use dynamic_cast this is a method used to cast from a

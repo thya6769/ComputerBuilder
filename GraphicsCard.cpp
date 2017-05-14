@@ -22,13 +22,11 @@ GraphicsCard::~GraphicsCard()
 
 std::string GraphicsCard::getPartInformation() const
 {
-    char frequency[5];
-    itoa(m_speed, frequency, 10);
 
-    char size[5];
-    itoa(m_size, size, 10);
+    std::stringstream ss;
+    ss << m_speed <<  " Mhz, Size: " << m_size << " GB";
 
-    std::string partInformation(m_name + ", Frequency: " + frequency + " Mhz, Size: " + size + " GB");
+    std::string partInformation(m_name + ", Frequency: " + ss.str());
 
     return partInformation;
 }

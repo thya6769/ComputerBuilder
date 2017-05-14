@@ -14,7 +14,7 @@ public:
      * @param numberOfGraphicsCards size of array
      * @return a new GraphicsCardSet
      */
-    static GraphicsCardSet getGraphicsCardSet(GraphicsCard* graphicsCards, int numberOfGraphicsCards);
+    static GraphicsCardSet* getGraphicsCardSet(GraphicsCard* graphicsCards, int numberOfGraphicsCards);
 
     /**
      * @brief getHardDriveSet creates a HardDriveSet using an
@@ -23,7 +23,7 @@ public:
      * @param numberOfHardDrives size of array
      * @return a new HardDriveSet
      */
-    static HardDriveSet getHardDriveSet(HardDrive** hardDrives, int numberOfHardDrives);
+    static HardDriveSet* getHardDriveSet(HardDrive** hardDrives, int numberOfHardDrives);
 
     /**
      * @brief getRamSet creates a RamSet using an
@@ -32,7 +32,7 @@ public:
      * @param numberOfRamSticks size of array
      * @return a new RamSet
      */
-    static RamSet getRamSet(Ram* ram, int numberOfRamSticks);
+    static RamSet* getRamSet(Ram* ram, int numberOfRamSticks);
 
     /**
      * @brief getHardDrive performs a deep copy on a HardDrive pointer

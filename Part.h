@@ -2,6 +2,7 @@
 #define PART_H
 
 #include <string>
+#include <sstream>
 
 /**
  * @brief The Part class due to this class including one virtual method this

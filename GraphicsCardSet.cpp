@@ -40,16 +40,19 @@ std::string GraphicsCardSet::getPartInformation() const
 {
     std::string partInformation("Graphics Cards: Number Of Cards: ");
 
-    char numberOfCards[5];
-    itoa(m_numberOfGraphicsCards, numberOfCards, 10);
+    std::stringstream ss;
+    ss << m_numberOfGraphicsCards;
 
-    partInformation += numberOfCards;
+    partInformation += ss.str();
 
     for (int i = 0; i < m_numberOfGraphicsCards; ++i)
     {
-        char index[5];
-        itoa(i + 1, index, 10);
-        partInformation += "\nSlot " + std::string(index) + ": " + m_graphicsCards[i].getPartInformation();
+
+        ss.str("");
+        ss.clear();
+        ss << i+1;
+
+        partInformation += "\nSlot " + ss.str() + ": " + m_graphicsCards[i].getPartInformation();
     }
 
     return partInformation;
