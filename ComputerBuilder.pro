@@ -32,7 +32,11 @@ SOURCES += main.cpp \
     RamSet.cpp \
     HardDriveSet.cpp \
     GraphicsCardSet.cpp \
-    PartAllocator.cpp
+    PartAllocator.cpp \
+    ComputerBuilder.cpp \
+    GamingComputerBuilder.cpp \
+    OfficeComputerBuilder.cpp \
+    ServerBuilder.cpp
 
 HEADERS += \
     Computer.h \
@@ -56,4 +60,8 @@ HEADERS += \
     RamSet.h \
     HardDriveSet.h \
     GraphicsCardSet.h \
-    ComputerParts.h
+    ComputerParts.h \
+    ComputerBuilder.h \
+    GamingComputerBuilder.h \
+    OfficeComputerBuilder.h \
+    ServerBuilder.h
